@@ -1,19 +1,7 @@
-﻿require 'active_type/active_type'
-require 'active_record'
+﻿require 'spec_helper'
 
 describe 'ActiveType' do
-
-  let(:connection_hash) do
-    {adapter: 'postgresql',
-     database: 'test-active-type',
-     host: 'localhost',
-     username: 'postgres',
-     password: 'postgres'
-    }
-  end
-
   before(:all) do
-    ActiveRecord::Base.establish_connection(connection_hash)
     ActiveRecord::Base.connection.execute <<-SQL
       DROP TYPE IF EXISTS address CASCADE;
       DROP TABLE IF EXISTS people CASCADE;

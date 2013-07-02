@@ -1,0 +1,5 @@
+adapter: postgresql
+database: test_active_type
+host: '/home/nicola/pg'
+port: 5555
+
